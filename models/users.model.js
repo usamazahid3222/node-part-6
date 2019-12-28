@@ -3,8 +3,8 @@ const mongoosePaginate = require('mongoose-paginate');
 const Schema = mongoose.Schema;
 
 const User = new Schema({
-    id: {
-        type: Number,
+    _id: {
+        type: String,
         unique: true,
         sparse:true
     },
@@ -41,6 +41,7 @@ const User = new Schema({
         default: 0
     }
 });
+
 
 User.plugin(mongoosePaginate);
 
